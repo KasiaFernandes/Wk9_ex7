@@ -54,6 +54,7 @@ function newGame() {
     player.score = computer.score = 0;
     gameState = 'started';
     setGameElements();
+    setGamePoints();  
 
     playerNameElem.innerHTML = player.name;
   }
@@ -137,7 +138,10 @@ function setGamePoints() {
         }
         
         setGameElements();
-
+        playerPickElem.innerText = 'Player selection';
+        computerPickElem.innerText = 'Computer selection';
+        playerResultElem.innerText = 'Player score';
+        computerResultElem.innerText = 'Computer score';
     }
 }
 
